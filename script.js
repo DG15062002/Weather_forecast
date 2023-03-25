@@ -1,5 +1,5 @@
 let weather = {
-  apiKey:'f81584a7e55b2e65c19748fc62248e48', // i went to open weather.org and then made my account after doing these things i just
+  apiKey:'f81584a7e55b2e65c19748fc62248e48', //  open weather.org t after doing these things i just
   // went to the option of API Key and fetch the Key from that place.
   fetchWeather: function (city) {
     fetch(
@@ -51,9 +51,10 @@ let weather = {
   }
 };
 
-document.querySelector('.search button').addEventListener('click', function () {
+var el= document.querySelector('.search button');
+if(el){el.addEventListener('click', function () {
   weather.search();
-});
+});}
 
 document
   .querySelector('.search-bar')
@@ -64,4 +65,4 @@ document
   });
 
 
-  weather.fetchWeather('Patna');
+  weather.fetchWeather('');
